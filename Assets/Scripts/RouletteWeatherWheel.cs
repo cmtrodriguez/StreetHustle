@@ -9,7 +9,7 @@ public class RouletteWeatherWheel : MonoBehaviour
     public Button spinButton;
     public GameObject popupContainer;
     public Image popupIcon;
-    public Button tryAgainButton;
+    public Button prepareStockButton;
     public TMPro.TextMeshProUGUI weatherResultText;
 
     [Header("Weather Sprites")]
@@ -34,7 +34,7 @@ public class RouletteWeatherWheel : MonoBehaviour
             spinButton.onClick.AddListener(Spin);
         }
         if (popupContainer != null) popupContainer.SetActive(false);
-        if (tryAgainButton != null) tryAgainButton.onClick.AddListener(ResetRoulette);
+        if (prepareStockButton != null) prepareStockButton.onClick.AddListener(OnPrepareStockClicked);
     }
 
     public void Spin()
@@ -127,10 +127,21 @@ public class RouletteWeatherWheel : MonoBehaviour
         }
     }
 
+
     public void ResetRoulette()
     {
         if (popupContainer != null) popupContainer.SetActive(false);
         if (spinButton != null) spinButton.interactable = true;
         isSpinning = false;
+    }
+
+    private void OnPrepareStockClicked()
+    {
+        Debug.Log("Prepare Stock Clicked! Button is now disabled.");
+        if (prepareStockButton != null)
+        {
+            prepareStockButton.interactable = false;
+        }
+        // Button directs to nowhere as requested
     }
 }

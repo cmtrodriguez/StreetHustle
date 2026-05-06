@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class CalendarUI : MonoBehaviour
 {
@@ -22,11 +23,9 @@ public class CalendarUI : MonoBehaviour
 
     private void Start()
     {
-        // Button logic disabled for now as per user request
-        /*
+        // Button logic enabled
         if (resetWeekButton != null) resetWeekButton.onClick.AddListener(OnResetClicked);
         if (continueHustleButton != null) continueHustleButton.onClick.AddListener(OnContinueClicked);
-        */
 
         UpdateCalendarUI();
     }
@@ -82,7 +81,7 @@ public class CalendarUI : MonoBehaviour
 
     private void OnContinueClicked()
     {
-        // Disabled for now
-        Debug.Log("Continue Hustle Clicked (Logic not implemented yet)");
+        Debug.Log("Continue Hustle Clicked - Loading Roulette Wheel");
+        SceneManager.LoadScene("RouletteScene");
     }
 }

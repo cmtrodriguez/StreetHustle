@@ -93,6 +93,13 @@ public class LoadingScreen : MonoBehaviour
 
         // Start loading asynchronously
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+
+        if (operation == null)
+        {
+            Debug.LogError($"Failed to load scene: {sceneName}. Make sure it's in Build Settings and the name is correct.");
+            yield break;
+        }
+
         operation.allowSceneActivation = false;
         
         float minimumLoadTime = 5f;
