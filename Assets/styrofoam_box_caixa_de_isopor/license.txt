@@ -1,0 +1,11 @@
+Model Information:
+* title:	Styrofoam Box (Caixa de Isopor)
+* source:	https://sketchfab.com/3d-models/styrofoam-box-caixa-de-isopor-55a94c6458c34649869a5f3a326858c7
+* author:	Marcos Silva (https://sketchfab.com/marcosramone25)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Styrofoam Box (Caixa de Isopor)" (https://sketchfab.com/3d-models/styrofoam-box-caixa-de-isopor-55a94c6458c34649869a5f3a326858c7) by Marcos Silva (https://sketchfab.com/marcosramone25) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

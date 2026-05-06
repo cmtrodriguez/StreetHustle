@@ -1,0 +1,65 @@
+{
+  "name": "LoadingCanvas",
+  "position": { "x": 0, "y": 0 },
+  "size": { "width": 1372, "height": 768 },
+  "type": "Canvas",
+  "backgroundType": "None",
+  "children": [
+    {
+      "name": "Background",
+      "position": { "x": 0, "y": 0 },
+      "size": { "width": 1372, "height": 768 },
+      "type": "Image",
+      "backgroundType": "Simple",
+      "text": "Full-screen blurred street scene background"
+    },
+    {
+      "name": "Panel",
+      "position": { "x": 0, "y": 20 },
+      "size": { "width": 900, "height": 500 },
+      "type": "Image",
+      "backgroundType": "Sliced",
+      "text": "Semi-transparent rounded panel"
+    },
+    {
+      "name": "Logo",
+      "position": { "x": 0, "y": 150 },
+      "size": { "width": 360, "height": 200 },
+      "type": "Image",
+      "backgroundType": "Simple",
+      "text": "Street Hustle logo"
+    },
+    {
+      "name": "LoadingLabel",
+      "position": { "x": 0, "y": -40 },
+      "size": { "width": 700, "height": 80 },
+      "type": "Text",
+      "backgroundType": "None",
+      "text": "GAME LOADING..."
+    },
+    {
+      "name": "ProgressBarBackground",
+      "position": { "x": 0, "y": -120 },
+      "size": { "width": 640, "height": 36 },
+      "type": "Image",
+      "backgroundType": "Sliced",
+      "text": "Dark rounded progress bar background"
+    },
+    {
+      "name": "ProgressBarFill",
+      "position": { "x": 0, "y": -120 },
+      "size": { "width": 640, "height": 36 },
+      "type": "Slider",
+      "backgroundType": "Sliced",
+      "text": "Orange progress fill"
+    },
+    {
+      "name": "StatusText",
+      "position": { "x": 0, "y": -170 },
+      "size": { "width": 600, "height": 40 },
+      "type": "Text",
+      "backgroundType": "None",
+      "text": "Loading... Monday Week 1"
+    }
+  ]
+}

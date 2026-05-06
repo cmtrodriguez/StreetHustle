@@ -1,0 +1,54 @@
+{
+  "name": "Canvas",
+  "position": { "x": 0, "y": 0 },
+  "size": { "width": 1536, "height": 857 },
+  "type": "Canvas",
+  "children": [
+    {
+      "name": "Background",
+      "position": { "x": 0, "y": 0 },
+      "size": { "width": 1536, "height": 857 },
+      "type": "Image",
+      "backgroundType": "Simple"
+    },
+    {
+      "name": "TitleText",
+      "position": { "x": 0, "y": 280 },
+      "size": { "width": 800, "height": 200 },
+      "type": "Text",
+      "text": "STREET\nHUSTLE"
+    },
+    {
+      "name": "StartWeekButton",
+      "position": { "x": 0, "y": 120 },
+      "size": { "width": 450, "height": 75 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "START WEEK"
+    },
+    {
+      "name": "InstructionsButton",
+      "position": { "x": 0, "y": 20 },
+      "size": { "width": 450, "height": 75 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "INSTRUCTIONS"
+    },
+    {
+      "name": "SettingsButton",
+      "position": { "x": 0, "y": -80 },
+      "size": { "width": 450, "height": 75 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "SETTINGS"
+    },
+    {
+      "name": "ExitButton",
+      "position": { "x": 0, "y": -180 },
+      "size": { "width": 450, "height": 75 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "EXIT"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Canvas",
+  "position": { "x": 0, "y": 0 },
+  "size": { "width": 1344, "height": 768 },
+  "type": "Canvas",
+  "children": [
+    {
+      "name": "Background",
+      "position": { "x": 0, "y": 0 },
+      "size": { "width": 1344, "height": 768 },
+      "type": "Image",
+      "backgroundType": "Simple"
+    },
+    {
+      "name": "Logo",
+      "position": { "x": 0, "y": 180 },
+      "size": { "width": 648, "height": 416 },
+      "type": "Image",
+      "backgroundType": "Simple"
+    },
+    {
+      "name": "StartWeekButton",
+      "position": { "x": 0, "y": -50 },
+      "size": { "width": 450, "height": 80 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "START WEEK\nBegin your 6-day hustle"
+    },
+    {
+      "name": "InstructionsButton",
+      "position": { "x": 0, "y": -140 },
+      "size": { "width": 450, "height": 80 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "INSTRUCTIONS\nHow to play"
+    },
+    {
+      "name": "SettingsButton",
+      "position": { "x": 0, "y": -230 },
+      "size": { "width": 450, "height": 80 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "SETTINGS\nAudio, Video, Controls"
+    },
+    {
+      "name": "ExitButton",
+      "position": { "x": 0, "y": -320 },
+      "size": { "width": 450, "height": 80 },
+      "type": "Button",
+      "backgroundType": "Sliced",
+      "text": "EXIT\nQuit Game"
+    }
+  ]
+}

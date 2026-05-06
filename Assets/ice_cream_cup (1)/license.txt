@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ice Cream Cup
+* source:	https://sketchfab.com/3d-models/ice-cream-cup-05d18f90e66545db8a9778da0ad99547
+* author:	VikaRamdina (https://sketchfab.com/VikaRamdina)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ice Cream Cup" (https://sketchfab.com/3d-models/ice-cream-cup-05d18f90e66545db8a9778da0ad99547) by VikaRamdina (https://sketchfab.com/VikaRamdina) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
