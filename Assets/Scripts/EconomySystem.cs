@@ -5,28 +5,22 @@ public class EconomySystem : MonoBehaviour
     [Header("Economy Stats")]
     public float startingMoney = 100f;
     
-    private float currentMoney;
+    public float CurrentMoney { get; private set; }
     private float dailySales;
     private float dailyExpenses;
 
-    private void Start()
-    {
-        currentMoney = startingMoney;
-        UpdateUI();
-    }
-
     public void AddMoney(float amount)
     {
-        currentMoney += amount;
+        CurrentMoney += amount;
         dailySales += amount;
         UpdateUI();
     }
 
     public bool SpendMoney(float amount)
     {
-        if (currentMoney >= amount)
+        if (CurrentMoney >= amount)
         {
-            currentMoney -= amount;
+            CurrentMoney -= amount;
             dailyExpenses += amount;
             UpdateUI();
             return true;
@@ -36,12 +30,13 @@ public class EconomySystem : MonoBehaviour
 
     private void UpdateUI()
     {
-        GameManager.Instance.uiManager.UpdateMoneyUI(currentMoney);
+        if (GameManager.Instance != null && GameManager.Instance.uiManager != null)
+            GameManager.Instance.uiManager.UpdateMoneyUI(CurrentMoney);
     }
 
     public void ResetEconomy()
     {
-        currentMoney = startingMoney;
+        CurrentMoney = startingMoney;
         dailySales = 0f;
         dailyExpenses = 0f;
         UpdateUI();

@@ -1,0 +1,79 @@
+.menu-button {
+    width: 48px;
+    height: 48px;
+    background-image: url('project://database/Assets/Textures/UI/Icon_Menu.png');
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: transparent;
+    border-width: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: scale 0.15s ease-out, translate 0.15s ease-out; /* Match lerp-like speed */
+}
+
+.menu-button:hover {
+    scale: 1.06; /* Match UIButtonHoverAnim hoverScale */
+    translate: 0 -4px; /* Match UIButtonHoverAnim hoverYOffset */
+}
+
+.menu-button:active {
+    scale: 0.98; /* Match UIButtonHoverAnim pressedScale */
+    translate: 0 0;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.7); /* Subtle press effect */
+}
+
+/* Pause Overlay */
+#PauseOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Same as RouletteWeatherWheel popup */
+    justify-content: center;
+    align-items: center;
+    display: none; /* Hidden by default */
+}
+
+.pause-panel {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    align-items: center;
+}
+
+.pause-title {
+    color: white;
+    font-size: 32px;
+    -unity-font-style: bold;
+    margin-bottom: 25px;
+}
+
+.pause-button {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: white;
+    -unity-font-style: bold;
+    border-width: 0;
+    transition: scale 0.1s ease-out;
+}
+
+.resume-btn {
+    background-color: #FF8C00;
+}
+
+.quit-btn {
+    background-color: #FF4500;
+}
+
+.pause-button:hover {
+    scale: 1.05;
+}
+
+.pause-button:active {
+    scale: 0.95;
+    opacity: 0.8;
+}

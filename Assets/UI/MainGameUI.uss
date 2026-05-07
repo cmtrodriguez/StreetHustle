@@ -1,0 +1,201 @@
+:root {
+    --bg-dark: rgba(26, 26, 26, 0.95);
+    --bg-card: rgba(37, 37, 37, 0.98);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --accent-orange: #FF8C00;
+    --accent-red: #FF4500;
+    --accent-blue: #4169E1;
+    --text-white: #FFFFFF;
+}
+
+.screen-container {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.top-bar {
+    flex-direction: row;
+    height: 60px;
+    background-color: var(--bg-dark);
+    border-radius: 20px;
+    align-items: center;
+    padding: 0 20px;
+    border-width: 1px;
+    border-color: var(--border-color);
+    margin-right: 70px; /* Leave space for the Menu button */
+}
+
+.top-bar-label {
+    color: var(--text-white);
+    font-size: 18px;
+    -unity-font-style: bold;
+    margin-right: 20px;
+}
+
+.weather-container {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#WeatherIcon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fallback to see it */
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: white;
+    z-index: 100;
+}
+
+.money-label {
+    color: var(--text-white);
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.stamina-container {
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+}
+
+.stamina-bar-bg {
+    flex-grow: 1;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.stamina-bar-fill {
+    width: 85%;
+    height: 100%;
+    background-color: var(--accent-orange);
+}
+
+.menu-button {
+    width: 48px;
+    height: 48px;
+    background-image: url('project://database/Assets/Textures/UI/Icon_Menu.png');
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: transparent;
+    border-width: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: scale 0.2s ease-in-out;
+}
+
+.menu-button:hover {
+    scale: 1.1;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-button:active {
+    scale: 0.95;
+    -unity-background-image-tint-color: var(--accent-orange);
+}
+
+.left-panel {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    width: 80px;
+    background-color: var(--bg-dark);
+    border-radius: 40px;
+    padding: 20px 0;
+    align-items: center;
+    border-width: 1px;
+    border-color: var(--border-color);
+}
+
+.action-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: scale 0.2s ease-in-out;
+}
+
+.button-bell { background-color: var(--accent-orange); }
+.button-serve { background-color: var(--accent-red); }
+.button-rest { background-color: var(--accent-blue); }
+
+.right-panel {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    bottom: 20px;
+    width: 320px;
+    background-color: var(--bg-dark);
+    border-radius: 20px;
+    padding: 15px;
+    border-width: 1px;
+    border-color: var(--border-color);
+}
+
+.order-card {
+    background-color: var(--bg-card);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-color: var(--border-color);
+}
+
+.order-header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.order-name {
+    color: white;
+    font-size: 16px;
+    -unity-font-style: bold;
+}
+
+.timer-bar-bg {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.timer-bar-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 3px;
+}
+
+.item-slots {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-slot {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.end-day-button {
+    margin-top: auto;
+    height: 45px;
+    background-color: var(--accent-red);
+    border-radius: 10px;
+    color: white;
+    -unity-font-style: bold;
+    border-width: 0;
+}

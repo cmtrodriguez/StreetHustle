@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="UnityEngine.UIElements ../../UIElementsSchema/UnityEngine.UIElements.xsd" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/MainGameUI.uss?fileID=7433441132597879392&amp;guid=c7d9c6e5a6e5a6e5a6e5a6e5a6e5a6e5&amp;type=3#MainGameUI" />
+    <ui:VisualElement class="screen-container">
+        <ui:VisualElement class="top-bar">
+            <ui:VisualElement class="weather-container">
+                <ui:VisualElement name="WeatherIcon" />
+                <ui:Label text="Sunny" name="WeatherLabel" style="color: white; font-size: 16px;" />
+            </ui:VisualElement>
+            <ui:Label text="[ ] Monday - Ice Scramble" name="DayLabel" class="top-bar-label" style="margin-right: auto;" />
+            <ui:Label text="$ P500.00" name="MoneyLabel" class="money-label" />
+            <ui:VisualElement class="stamina-container">
+                <ui:VisualElement class="stamina-bar-bg">
+                    <ui:VisualElement name="StaminaFill" class="stamina-bar-fill" />
+                </ui:VisualElement>
+                <ui:Label text="+" style="color: #FF8C00; font-size: 18px; margin-left: 5px; -unity-font-style: bold;" />
+                <ui:Label text="85%" style="color: #FF8C00; font-size: 12px; margin-left: 2px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+        <ui:VisualElement class="left-panel">
+            <ui:Button text="!" name="BellButton" class="action-button button-bell" />
+            <ui:Button text="✓" name="ServeButton" class="action-button button-serve" />
+            <ui:Button text=")" name="RestButton" class="action-button button-rest" />
+        </ui:VisualElement>
+        
+        <ui:VisualElement class="right-panel">
+            <ui:ScrollView name="OrderList" style="flex-grow: 1;">
+                <ui:VisualElement class="order-card">
+                    <ui:VisualElement class="order-header">
+                        <ui:Label text="[1] Sarah" class="order-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="timer-bar-bg">
+                        <ui:VisualElement class="timer-bar-fill" style="width: 70%;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="item-slots">
+                        <ui:VisualElement class="item-slot" />
+                        <ui:VisualElement class="item-slot" />
+                        <ui:VisualElement class="item-slot" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:ScrollView>
+            <ui:Button text="END DAY" name="EndDayButton" class="end-day-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -11,33 +11,33 @@ public class StaminaSystem : MonoBehaviour
     public float speedPenaltyThreshold = 20f;
     public float speedPenaltyMultiplier = 0.5f;
     
-    private float currentStamina;
+    public float CurrentStamina { get; private set; }
     private UIManager uiManager;
 
     private void Start()
     {
-        currentStamina = maxStamina;
+        CurrentStamina = maxStamina;
         uiManager = GameManager.Instance.uiManager;
         UpdateUI();
     }
 
     public void DrainStamina(float amount)
     {
-        currentStamina -= amount * Time.deltaTime;
-        currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
+        CurrentStamina -= amount * Time.deltaTime;
+        CurrentStamina = Mathf.Clamp(CurrentStamina, 0, maxStamina);
         UpdateUI();
     }
 
     public void RegenStamina()
     {
-        currentStamina += regenRate * Time.deltaTime;
-        currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
+        CurrentStamina += regenRate * Time.deltaTime;
+        CurrentStamina = Mathf.Clamp(CurrentStamina, 0, maxStamina);
         UpdateUI();
     }
 
     public float GetSpeedModifier()
     {
-        if (currentStamina <= speedPenaltyThreshold)
+        if (CurrentStamina <= speedPenaltyThreshold)
             return speedPenaltyMultiplier;
         return 1f;
     }
@@ -46,7 +46,7 @@ public class StaminaSystem : MonoBehaviour
     {
         if(uiManager != null)
         {
-            uiManager.UpdateStamina(currentStamina, maxStamina);
+            uiManager.UpdateStamina(CurrentStamina, maxStamina);
         }
     }
 }
