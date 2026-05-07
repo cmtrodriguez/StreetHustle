@@ -74,7 +74,10 @@ public class LoadingScreen : MonoBehaviour
 
         // Show Loading Screen
         if (loadingPanel != null)
+        {
             loadingPanel.SetActive(true);
+            if (canvasGroup != null) canvasGroup.alpha = 1f; // Force instant visibility
+        }
 
         // Fade in
         if (canvasGroup != null)
@@ -84,7 +87,7 @@ public class LoadingScreen : MonoBehaviour
             float time = 0;
             while (time < fadeDuration)
             {
-                time += Time.deltaTime;
+                time += Time.unscaledDeltaTime;
                 canvasGroup.alpha = Mathf.Lerp(0f, 1f, time / fadeDuration);
                 yield return null;
             }
@@ -102,13 +105,14 @@ public class LoadingScreen : MonoBehaviour
 
         operation.allowSceneActivation = false;
         
-        float minimumLoadTime = 5f;
+        // Shorter load time for Main Menu, longer for gameplay scenes
+        float minimumLoadTime = sceneName.Contains("Main Menu") ? 1.5f : 5f;
         float loadTimer = 0f;
         
         // Ensure scene is loaded properly and minimum time has passed
         while (!operation.isDone)
         {
-            loadTimer += Time.deltaTime;
+            loadTimer += Time.unscaledDeltaTime;
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
             
             // Artificial progress factor based on time
@@ -144,7 +148,7 @@ public class LoadingScreen : MonoBehaviour
             float time = 0;
             while (time < fadeDuration)
             {
-                time += Time.deltaTime;
+                time += Time.unscaledDeltaTime;
                 canvasGroup.alpha = Mathf.Lerp(1f, 0f, time / fadeDuration);
                 yield return null;
             }

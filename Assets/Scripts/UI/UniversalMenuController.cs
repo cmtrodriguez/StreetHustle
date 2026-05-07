@@ -30,8 +30,19 @@ public class UniversalMenuController : MonoBehaviour
         {
             _quitButton.clicked += () => 
             {
+                // Hide pause menu immediately so the loading overlay is visible
+                if (_pauseOverlay != null) _pauseOverlay.style.display = DisplayStyle.None;
+                
                 Time.timeScale = 1f; // Ensure time is unpaused before loading
-                SceneManager.LoadScene("Main Menu and Loading Screen");
+                
+                if (LoadingScreen.Instance != null)
+                {
+                    LoadingScreen.Instance.LoadScene("Main Menu and Loading Screen");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Main Menu and Loading Screen");
+                }
             };
         }
     }
